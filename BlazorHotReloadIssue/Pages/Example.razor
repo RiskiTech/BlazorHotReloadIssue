@@ -1,0 +1,15 @@
+﻿@page "/example"
+@using BlazorHotReloadIssue.Data
+<h3>Example</h3>
+
+
+<EditForm Model="foo">
+    <InputCheckbox @bind-Value="foo.SomeValue"></InputCheckbox>
+</EditForm>
+
+<i>Make a change somewhere on this document and then reload.</i>
+
+@code {
+
+    private readonly TestClass foo = new();
+}
